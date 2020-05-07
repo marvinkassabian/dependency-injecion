@@ -19,5 +19,8 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^7.1.2"
+  },
+  "dependencies": {
+    "@marvinkassabian/get-function-arguments": "^2.0.0"
   }
 }
