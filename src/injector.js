@@ -1,6 +1,10 @@
 const getFunctionArguments = require('@marvinkassabian/get-function-arguments');
 
-module.exports = () => {
+/**
+ * @param {Object} config
+ * @param {string} config.prefix
+ */
+module.exports = (config) => {
     const constructors = {};
     const services = {};
 
@@ -16,7 +20,7 @@ module.exports = () => {
         return services[name];
     };
     const inject = create => {
-        const argNames = getFunctionArguments({ prefix: '$' })(create);
+        const argNames = getFunctionArguments({ prefix: config.prefix })(create);
         console.log('argNames', argNames);
         const args = new Map(argNames.map(argName => [argName, render(argName)]));
         const dependencies = Object.fromEntries(args);

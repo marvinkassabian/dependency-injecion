@@ -1,6 +1,6 @@
 {
   "name": "@marvinkassabian/dependency-injection",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "help with dependency injection",
   "main": "index.js",
   "scripts": {
